@@ -1,0 +1,21 @@
+{
+  "name": "aryan-portfolio",
+  "version": "1.0.0",
+  "description": "MERN Stack Portfolio Website",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": ["portfolio", "mern", "react", "nodejs"],
+  "author": "Aryan Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
